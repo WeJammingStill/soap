@@ -2,8 +2,8 @@
 
 static const Pair pairs[] = {
 	/* regex                  action */
-	{ "\.(jpg|png|tiff)$",    "feh %s"        },
-	{ "\.gif$",               "wget -O /tmp/tmp_gifview.gif %s && gifview -a /tmp/tmp_gifview.gif" },
-	{ "\.mp3$",               "st -e mplayer %s" },
-	{ "^(http://|https://)?(www\.)?(youtube.com/watch\?|youtu\.be/)", "youtube-viewer %s" }
+	{ "\.(jpg|png|tiff)$",    "sxiv.sh %s 2>/dev/null"        },
+	{ "\.gif$",               "mpv --loop %s 2>/dev/null" },
+	{ "\.mp3$",               "termite -e mpv %s" },
+	{ "^(http://|https://)?(www\.)?(youtube.com/watch\?|youtu\.be/)", "mpv %s 2>/dev/null" }
 };
