@@ -32,7 +32,10 @@ install: all
 	@echo installing new xdg-open
 	@cp -f soap /usr/bin/xdg-open
 	@chmod 755 /usr/bin/xdg-open
+	@cp -f soap /usr/bin/open
+	@chmod 755 /usr/bin/open
 
 uninstall:
 	@echo moving xdg-open_ back into place
 	@(test -f /usr/bin/xdg-open_ && mv /usr/bin/xdg-open_ /usr/bin/xdg-open) || echo ERROR: xdg-open_ does not exist
+	@rm /usr/bin/open
