@@ -50,7 +50,7 @@ main(int argc, char *argv[]){
 	}
 
 	/* alternatively, fall back to xdg-open_ */
-	snprintf(cmd, sizeof cmd, "nohup xdg-open_ %s > /dev/null & disown", sharg);
+	snprintf(cmd, sizeof cmd, "nohup xdg-open_ %s &> /dev/null & disown", sharg);
 	system(cmd);
 	return EXIT_SUCCESS;
 }
